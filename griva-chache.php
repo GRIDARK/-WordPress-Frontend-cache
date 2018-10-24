@@ -6,7 +6,7 @@
 * Author: Vasily Grigoriev
 * Author URI: https://grigoriev.site/
 * Network: true
-* Version: 0.1.0
+* Version: 0.1.1
 */
 
 class grivaFrontendCache
@@ -27,11 +27,7 @@ class grivaFrontendCache
     public function __construct()
     {
         if (!$this->cahceEnabled()) return;
-        $this->handler();
-    }
 
-    private function handler()
-    {
         $currentUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         $hashUrl = md5($currentUrl);
         $file = $this->getFilePath($hashUrl);
@@ -61,7 +57,7 @@ class grivaFrontendCache
     }
 
     /**
-     * Функция возвращает путь к файлу кеша на основе его имени.
+     * Функция возвращает путь к файлу кеша на основе его идентификатора.
      * Если подпапок не создано, то они попутно создаются
      * @param string $hashUrl Идентификатор файла с кэшем
      * @return string
