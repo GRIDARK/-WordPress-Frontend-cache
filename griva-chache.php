@@ -114,8 +114,8 @@ class grivaFrontendCache
     private function isAuthPages()
     {
         $absPath = str_replace(['\\','/'], DIRECTORY_SEPARATOR, ABSPATH);
-        $isRegistrationPage = in_array($ABSPATH_MY.'wp-register.php', get_included_files());
-        $isLoginPageByFiles = in_array($ABSPATH_MY.'wp-login.php', get_included_files());
+        $isRegistrationPage = in_array($absPath.'wp-register.php', get_included_files());
+        $isLoginPageByFiles = in_array($absPath.'wp-login.php', get_included_files());
         $isLoginPageByGlobals = isset($GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php';
         $isLoginPageBySelf = $_SERVER['PHP_SELF']== '/wp-login.php';
         $isLoginPage = $isLoginPageByFiles || $isLoginPageByGlobals || $isLoginPageBySelf;
