@@ -36,7 +36,7 @@ class grivaFrontendCache
 
         // Проверяем - существует ли кэш-файл URL и не истек ли срок его дествия
         if (!file_exists($file) || empty(file_get_contents($file))) $renew = true;
-        elseif (file_exists($file) && time() - filemtime($file) > $cacheTime) $renew = true;
+        elseif (file_exists($file) && time() - filemtime($file) > $this->cacheTime) $renew = true;
 
         if ($renew && !$isUser) {
             ob_start(function ($buffer) use ($file) {
@@ -89,7 +89,7 @@ class grivaFrontendCache
     {
         $firstLayer = substr($hashUrl, 0, 2);
         $secondLayer = substr($hashUrl, 2, 2);
-        return [$firstLayer, $secondLayer];
+        return array($firstLayer, $secondLayer);
     }
 
     /**
