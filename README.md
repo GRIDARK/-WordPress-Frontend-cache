@@ -1,4 +1,6 @@
 # GRIVA WordPress Frontend Cache for guests
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGRIDARK%2Fwordpress-simple-cache.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FGRIDARK%2Fwordpress-simple-cache?ref=badge_shield)
+
 Данный плагин позволяет почти в одно действие настроить весьма простой кэш страниц сайта на WordPress.
 ## Установка
 В папке ```/wp-content/mu-plugins``` (если таковой нет, то создайте) поместите файл ```griva-chache.php```
@@ -33,3 +35,7 @@ PHP 5.6+
 - Кеширует по URL (включая GET параметры)
 - Обновить кэш одной страницы можно простым ее посещением, как залогиненый пользователь
 - Не применим к высоконагруженным сайтам
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGRIDARK%2Fwordpress-simple-cache.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FGRIDARK%2Fwordpress-simple-cache?ref=badge_large)
